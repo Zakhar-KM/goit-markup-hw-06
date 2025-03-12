@@ -621,6 +621,7 @@ button {
 }
 @media screen and (min-width: 1158px) {
   .team-container {
+    width: 100%;
     padding: 120px 15px;
   }
   .team-list {
@@ -917,6 +918,7 @@ button {
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
+    width: 100%;
   }
   .container-main-footer .team-socials-link:hover,
   .container-main-footer .container-main-footer .team-socials-link:focus {
