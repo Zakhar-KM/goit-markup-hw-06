@@ -274,9 +274,8 @@ button {
   display: block;
   margin-bottom: 40px;
 }
-.mobile-menu-list-nav:hover,
-.mobile-menu-list-nav:focus,
-.mobile-menu-list-nav:active {
+.mobile-menu-list-nav:active,
+.mobile-menu-list-nav.current {
   color: #404bbf;
 }
 .menu-address {
@@ -293,10 +292,8 @@ button {
   letter-spacing: 0.02em;
   color: #434455;
 }
-
-.menu-address-link:hover,
 .menu-address-link:active,
-.menu-address-link:focus {
+.menu-address-link.current {
   color: #404bbf;
 }
 .mobile-socials {
@@ -341,14 +338,13 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/peopleoffice.jpg);
+    url(../images/dark-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 72px 0;
   max-width: 320px;
   margin: 0 auto;
-  height: 432px;
 }
 @media (min-resolution: 2x) {
   .hero {
@@ -356,7 +352,7 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office2x.jpg);
+      url(../images/dark-bg-mob@2x.jpg);
   }
 }
 .hero-container {
@@ -398,7 +394,14 @@ button {
   .hero {
     padding: 112px 0;
     max-width: 768px;
-    height: 436px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/dark-bg-tab.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .hero-title {
     max-width: 496px;
@@ -410,11 +413,27 @@ button {
     margin-bottom: 36px;
   }
 }
+@media screen and (min-width: 768px) and (min-resolution: 2x) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/dark-bg-tab@2x.jpg);
+  }
+}
 @media screen and (min-width: 1158px) {
   .hero {
     padding: 188px 0;
     max-width: 1440px;
-    height: 600px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/peopleoffice.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .hero-title {
     margin-bottom: 48px;
@@ -422,6 +441,15 @@ button {
   .hero-button:hover,
   .hero-button:focus {
     background-color: #404bbf;
+  }
+}
+@media screen and (min-width: 1158px) and (min-resolution: 2x) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-desk@2x.jpg);
   }
 }
 /* #endregion hero */
@@ -442,7 +470,6 @@ button {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  text-align: center;
   margin-bottom: 8px;
   color: #2e2f42;
 }
@@ -486,7 +513,6 @@ button {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    text-align: left;
   }
   .features-text {
     font-weight: 400;
@@ -570,7 +596,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .team-container {
-    padding: 96px 108px;
+    width: 586px;
   }
   .team {
     align-content: normal;
@@ -756,7 +782,7 @@ button {
   letter-spacing: 0.02em;
   width: 264px;
   color: #f4f4fd;
-  padding-top: 16px;
+  margin-top: 16px;
 }
 .container-main-footer {
   display: flex;
@@ -764,6 +790,10 @@ button {
   justify-content: center;
   align-items: center;
 }
+.footer-socials-cont {
+  margin-top: 72px;
+}
+
 .footer-socials {
   display: flex;
   justify-content: center;
@@ -773,7 +803,6 @@ button {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
-  margin-top: 72px;
 }
 .team-socials-footer {
   margin: 0;
@@ -785,11 +814,12 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-subscribtion-cont {
+  margin-top: 72px;
 }
 .subscribe-title {
   display: flex;
   justify-content: center;
-  margin-top: 72px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -851,10 +881,16 @@ button {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 72px 24px;
-    padding: 0 108px;
+    width: 586px;
+  }
+  .footer-socials-cont {
+    margin-top: 0;
   }
   .footer-socials {
     justify-content: flex-start;
+    margin-top: 0;
+  }
+  .form-subscribtion-cont {
     margin-top: 0;
   }
   .subscribe-title {
@@ -989,6 +1025,9 @@ button {
   flex-direction: column;
   width: 100%;
   margin-bottom: 8px;
+}
+.modal-block-text {
+  margin-bottom: 16px;
 }
 .modal-label {
   display: block;
